@@ -33,9 +33,9 @@ Provide a structured summary with these sections:
 
 Keep it concise and medically accurate.`;
 
-    // Use Gemini REST API directly
+    // Use Gemini 2.0 Flash REST API
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         method: 'POST',
         headers: {

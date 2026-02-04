@@ -13,9 +13,9 @@ export async function POST(request: NextRequest) {
 
     const prompt = `Translate the following text to ${targetLanguage}. Provide ONLY the translation, nothing else:\n\n${text}`;
 
-    // Use Gemini REST API directly
+    // Use Gemini 2.0 Flash REST API
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`,
       {
         method: 'POST',
         headers: {
